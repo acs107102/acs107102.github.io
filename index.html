@@ -66,15 +66,24 @@
         background: none;
       }
 
-      div.absolute {
+      div.legend {
         position: absolute;
         bottom: 20px;
         right: 20px;
         z-index: 10;
         background: #FFFFFF;
         width: 300px;
-        height: 180px;
         padding: 10px;
+        border-radius: 3px;
+      }
+
+      div.tip {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+        background: #FFFFFF;
+        border-radius: 3px;
       }
 
       p {
@@ -85,10 +94,15 @@
     </style>
   </head>
   <body>
-    <div class="absolute">
-      <div><img src="JCDLogo.png" alt="Logo" style="width:40%"></div>
-      <p>SpatialWorx: Visualising Campaigns Across the UK</p>
-      <p>Campaigns: 2321, Sites: 4107, Time of Day: <span id="demo"></span></p>
+    <div class="tip">
+        <p>Press "Shift" to adjust the camera angle</p>
+    </div>
+    <div class="legend">
+      <img src="JCDLogo.png" alt="Logo" style="width:40%">
+      <p><b>SpatialWorx: Visualising Campaigns Across the UK</b></p>
+      <p>Campaigns: 2321 <br>
+        Sites: 4107 <br>
+        Time of Day: <span id="demo"></span></p>
       <div class="slidecontainer">
         <input type="range" min="0" max="5" step="1" value="0" class="slider" id="myRange">
       </div>
@@ -147956,7 +147970,7 @@
         configuration
       });
 
-    console.log(deckInstance.props);
+    // console.log(deckInstance.props);
     let viewState = deckInstance.props.initialViewState;
     let isDragging = false;
 
@@ -148013,6 +148027,14 @@
       // console.log("Updated layer properties:", updatedLayer.props);
       deckInstance.setProps({ layers: [updatedLayer]});
     }   
+
+    function autoSlide() {
+        let value = parseInt(slider.value);
+        value = (value + 1) % dateList.length;
+        slider.value = value;
+        slider.oninput();
+    }
+    setInterval(autoSlide, 1500);
   
   </script>
 </html>
