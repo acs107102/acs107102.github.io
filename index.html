@@ -73,7 +73,7 @@
         z-index: 10;
         background: #FFFFFF;
         width: 300px;
-        height: 140px;
+        height: 180px;
         padding: 10px;
       }
 
@@ -147984,7 +147984,7 @@
       if (isDragging) return;
       const rotate = {
         ...viewState,
-        bearing: viewState.bearing + 10,
+        bearing: viewState.bearing + 4,
         transitionDuration: 1000,
         // transitionInterpolator: new LinearInterpolator(),  // stop when mouse interrupt
         transitionInterpolator: new LinearInterpolator(['bearing']),  // continuously rotate
