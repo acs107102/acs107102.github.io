@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "bearing": -27.36,
+    "latitude": 52.2323,
+    "longitude": -1.415,
+    "maxZoom": 15,
+    "minZoom": 5,
+    "pitch": 40.5,
+    "zoom": 6
+  },
+  "layers": [
+    {
+      "@@type": "HexagonLayer",
+      "autoHighlight": true,
+      "colorRange": [
+        [
+          1,
+          152,
+          189
+        ],
+        [
+          73,
+          227,
+          206
+        ],
+        [
+          216,
+          254,
+          181
+        ],
+        [
+          254,
+          237,
+          177
+        ],
+        [
+          254,
+          173,
+          84
+        ],
+        [
+          209,
+          55,
+          78
+        ]
+      ],
+      "controller": true,
+      "coverage": 1,
+      "data": [
+        {
+          "MoT1": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " coco"
+              }
+            ],
+            "num": 2
+          },
+          "MoT2": {
+            "brand": [
+              {
+                "name": "jcd"
+              }
+            ],
+            "num": 1
+          },
+          "MoT3": {
+            "brand": [
+              {
+                "name": "cat"
+              }
+            ],
+            "num": 1
+          },
+          "MoT4": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " aa"
+              }
+            ],
+            "num": 2
+          },
+          "MoT5": {
+            "brand": [
+              {
+                "name": "cat"
+              },
+              {
+                "name": " dog"
+              }
+            ],
+            "num": 2
+          },
+          "MoT6": {
+            "brand": [
+              {
+                "name": "netfix"
+              }
+            ],
+            "num": 1
+          },
+          "Unnamed: 0": {
+            "brand": [
+              {
+                "name": "ELM0002DD"
+              }
+            ],
+            "num": 1
+          },
+          "latitude": 51.407859,
+          "longitude": -0.369006,
+          "rank": 0
+        },
+        {
+          "MoT1": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " jcd"
+              }
+            ],
+            "num": 2
+          },
+          "MoT2": {
+            "brand": [
+              {
+                "name": "dd"
+              }
+            ],
+            "num": 1
+          },
+          "MoT3": {
+            "brand": [
+              {
+                "name": "dog"
+              }
+            ],
+            "num": 1
+          },
+          "MoT4": {
+            "brand": [
+              {
+                "name": "cat"
+              }
+            ],
+            "num": 1
+          },
+          "MoT5": {
+            "brand": [
+              {
+                "name": "ab"
+              },
+              {
+                "name": " jcd"
+              }
+            ],
+            "num": 2
+          },
+          "MoT6": {
+            "brand": [
+              {
+                "name": "cat"
+              },
+              {
+                "name": " dog"
+              }
+            ],
+            "num": 2
+          },
+          "Unnamed: 0": {
+            "brand": [
+              {
+                "name": "BML0037DD"
+              }
+            ],
+            "num": 1
+          },
+          "latitude": 51.400002,
+          "longitude": 0.031391,
+          "rank": 0
+        },
+        {
+          "MoT1": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " aa"
+              }
+            ],
+            "num": 2
+          },
+          "MoT2": {
+            "brand": [
+              {
+                "name": "ab"
+              },
+              {
+                "name": " jcd"
+              }
+            ],
+            "num": 2
+          },
+          "MoT3": {
+            "brand": [
+              {
+                "name": "coco"
+              }
+            ],
+            "num": 1
+          },
+          "MoT4": {
+            "brand": [
+              {
+                "name": "coco"
+              }
+            ],
+            "num": 1
+          },
+          "MoT5": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " aa"
+              }
+            ],
+            "num": 2
+          },
+          "MoT6": {
+            "brand": [
+              {
+                "name": "jcd"
+              }
+            ],
+            "num": 1
+          },
+          "Unnamed: 0": {
+            "brand": [
+              {
+                "name": "BML0036DD"
+              }
+            ],
+            "num": 1
+          },
+          "latitude": 51.412563,
+          "longitude": 0.12282,
+          "rank": 0
+        },
+        {
+          "MoT1": {
+            "brand": [
+              {
+                "name": "netfix"
+              }
+            ],
+            "num": 1
+          },
+          "MoT2": {
+            "brand": [
+              {
+                "name": "cat"
+              },
+              {
+                "name": " dog"
+              }
+            ],
+            "num": 2
+          },
+          "MoT3": {
+            "brand": [
+              {
+                "name": "aa"
+              }
+            ],
+            "num": 1
+          },
+          "MoT4": {
+            "brand": [
+              {
+                "name": "dd"
+              }
+            ],
+            "num": 1
+          },
+          "MoT5": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " jcd"
+              }
+            ],
+            "num": 2
+          },
+          "MoT6": {
+            "brand": [
+              {
+                "name": "netfix"
+              },
+              {
+                "name": " aa"
+              }
+            ],
+            "num": 2
+          },
+          "Unnamed: 0": {
+            "brand": [
+              {
+                "name": "KEN0001DD"
+              }
+            ],
+            "num": 1
+          },
+          "latitude": 51.493145,
+          "longitude": -0.201273,
+          "rank": 0
+        }
+      ],
+      "elevationRange": [
+        0,
+        10
+      ],
+      "elevationScale": 8000,
+      "extruded": true,
+      "filled": false,
+      "getElevationWeight": d => d.MoT1.num,
+      "getPosition": "@@=[longitude, latitude]",
+      "id": "2f33da41-5f9f-40e4-bfca-1163bd2bbdaf",
+      "pickable": true,
+      "radius": 500
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '<b>Campaigns:</b> {elevationValue}', 'style': {'backgroundColor': 'steelblue', 'color': 'white'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

@@ -1,0 +1,5 @@
+,MoT1,MoT2,MoT3,MoT4,MoT5,MoT6,latitude,longitude,rank
+ELM0002DD,"[‘netfix’, ‘coco’]",[‘jcd’],[‘cat’],"[‘netfix’, ‘aa’]","[‘cat’, ‘dog’]",[‘netfix’],51.407859,-0.369006,0
+BML0037DD,"[‘netfix’, ‘jcd’]",[‘dd’],[‘dog’],[‘cat’],"[‘ab’, ‘jcd’]","[‘cat’, ‘dog’]",51.400002,0.031391,0
+BML0036DD,"[‘netfix’, ‘aa’]","[‘ab’, ‘jcd’]",[‘coco’],[‘coco’],"[‘netfix’, ‘aa’]",[‘jcd’],51.412563,0.12282,0
+KEN0001DD,[‘netfix’],"[‘cat’, ‘dog’]",[‘aa’],[‘dd’],"[‘netfix’, ‘jcd’]","[‘netfix’, ‘aa’]",51.493145,-0.201273,0
